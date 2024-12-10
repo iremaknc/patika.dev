@@ -1,0 +1,55 @@
+// hesap makinesi
+// canister=> akıllı sözleşme
+// değişkenler (let -> immutable, var -> mutable), operatörler, async metodu, if condition
+
+actor calculator {
+var cubicle: Int = 0;
+
+//summation function
+public func summation(s: Int) : async Int {
+    cubicle += s;
+    cubicle
+};
+
+//subtraction function
+public func subtraction(s: Int) : async Int {
+   cubicle -= s;
+   cubicle
+};
+
+// multiplication function
+public func multiplication(s: Int) : async Int {
+   cubicle *= s ;
+   cubicle
+};
+
+// division function
+public func division(s: Int) : async ?Int {
+    if (s == 0) {
+      null
+    }else {
+       cubicle /= s ;
+       ?cubicle
+    };
+};
+
+// cleaning function
+public func clean() : async () {
+    cubicle := 0;
+};
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
